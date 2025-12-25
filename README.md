@@ -1,11 +1,13 @@
 # Bookmarks Smart Organizer - User Guide
 
 <div align="right">
-  <button onclick="switchLanguage('en')" id="btn-en" style="background: #667eea; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; margin-left: 5px;">English</button>
-  <button onclick="switchLanguage('zh')" id="btn-zh" style="background: #e0e0e0; color: #333; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer;">中文</button>
+  <a href="#english-version" style="background: #667eea; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; margin-left: 5px; text-decoration: none; display: inline-block;">English</a>
+  <a href="#中文版本" style="background: #e0e0e0; color: #333; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block;">中文</a>
 </div>
 
-<div id="content-en">
+---
+
+<div id="english-version">
 
 # Bookmarks Smart Organizer - User Guide
 
@@ -371,7 +373,9 @@ We hope this extension helps you maintain a clean and organized bookmark collect
 
 </div>
 
-<div id="content-zh" style="display: none;">
+---
+
+<div id="中文版本">
 
 # 书签智能整理助手 - 使用手册
 
@@ -736,37 +740,3 @@ We hope this extension helps you maintain a clean and organized bookmark collect
 我们希望这个扩展能帮助您维护一个整洁有序的书签集合。如果您有建议或反馈，请随时联系我们。
 
 </div>
-
-<script>
-function switchLanguage(lang) {
-  const zhContent = document.getElementById('content-zh');
-  const enContent = document.getElementById('content-en');
-  const btnZh = document.getElementById('btn-zh');
-  const btnEn = document.getElementById('btn-en');
-  
-  if (lang === 'zh') {
-    zhContent.style.display = 'block';
-    enContent.style.display = 'none';
-    btnZh.style.background = '#667eea';
-    btnZh.style.color = 'white';
-    btnEn.style.background = '#e0e0e0';
-    btnEn.style.color = '#333';
-    localStorage.setItem('preferredLanguage', 'zh');
-  } else {
-    zhContent.style.display = 'none';
-    enContent.style.display = 'block';
-    btnEn.style.background = '#667eea';
-    btnEn.style.color = 'white';
-    btnZh.style.background = '#e0e0e0';
-    btnZh.style.color = '#333';
-    localStorage.setItem('preferredLanguage', 'en');
-  }
-}
-
-// Load saved language preference (default to English)
-window.addEventListener('DOMContentLoaded', function() {
-  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
-  switchLanguage(savedLang);
-});
-</script>
-

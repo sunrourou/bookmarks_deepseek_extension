@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>隐私政策 - 书签智能整理助手</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    h3 {
+      color: #555;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul, ol {
+      margin-left: 30px;
+      margin-bottom: 15px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    .last-updated {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+    .highlight {
+      background: #fff3cd;
+      padding: 15px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+    }
+    a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>隐私政策</h1>
+    <p class="last-updated">最后更新日期：2024年</p>
+
+    <h2>概述</h2>
+    <p>书签智能整理助手（"本扩展"）尊重您的隐私。本隐私政策说明了我们如何收集、使用和保护您的信息。</p>
+
+    <h2>数据收集</h2>
+    
+    <h3>我们收集的数据</h3>
+    <ol>
+      <li><strong>书签数据</strong>：本扩展仅在本地访问您的浏览器书签，用于分类整理和检测无效书签。所有书签数据仅在您的设备本地处理，<strong>不会上传到任何服务器</strong>。</li>
+      <li><strong>API密钥</strong>：如果您使用AI分类功能，需要输入DeepSeek API密钥。该密钥存储在Chrome的本地存储中（<code>chrome.storage.sync</code>），<strong>仅用于与DeepSeek API通信，不会与任何第三方共享</strong>。</li>
+      <li><strong>操作记录</strong>：当您使用"应用分类"功能时，扩展会保存操作记录到本地存储（<code>chrome.storage.local</code>），用于恢复功能。这些数据<strong>仅存储在您的设备上</strong>。</li>
+    </ol>
+
+    <h3>我们不收集的数据</h3>
+    <ul>
+      <li>我们不收集您的个人信息</li>
+      <li>我们不收集您的浏览历史</li>
+      <li>我们不收集您的IP地址</li>
+      <li>我们不使用任何分析或跟踪工具</li>
+      <li>我们不向第三方出售或分享任何数据</li>
+    </ul>
+
+    <h2>数据使用</h2>
+    
+    <h3>书签数据</h3>
+    <ul>
+      <li><strong>用途</strong>：仅在本地用于分类整理和检测无效书签</li>
+      <li><strong>存储位置</strong>：仅在您的浏览器内存中临时使用，不会持久化存储</li>
+      <li><strong>传输</strong>：不会上传到任何服务器</li>
+    </ul>
+
+    <h3>API密钥</h3>
+    <ul>
+      <li><strong>用途</strong>：仅用于与DeepSeek API通信，进行AI分类</li>
+      <li><strong>存储位置</strong>：Chrome同步存储（<code>chrome.storage.sync</code>）</li>
+      <li><strong>传输</strong>：仅发送到DeepSeek API服务器（<code>https://api.deepseek.com</code>）</li>
+    </ul>
+
+    <h3>操作记录</h3>
+    <ul>
+      <li><strong>用途</strong>：用于恢复书签到原始位置</li>
+      <li><strong>存储位置</strong>：Chrome本地存储（<code>chrome.storage.local</code>）</li>
+      <li><strong>传输</strong>：不会上传到任何服务器</li>
+    </ul>
+
+    <h2>第三方服务</h2>
+    <div class="highlight">
+      <h3>DeepSeek API</h3>
+      <p>如果您使用AI分类功能，您的书签信息（标题和URL）会发送到DeepSeek API服务器进行分类。请参考<a href="https://platform.deepseek.com" target="_blank">DeepSeek隐私政策</a>了解他们如何处理数据。</p>
+      <p><strong>注意</strong>：书签数据仅用于分类，不会用于其他目的。</p>
+    </div>
+
+    <h2>数据安全</h2>
+    <ul>
+      <li>所有数据存储在Chrome的安全存储中</li>
+      <li>API密钥使用Chrome的加密同步存储</li>
+      <li>我们不会访问或存储您的密码或其他敏感信息</li>
+    </ul>
+
+    <h2>您的权利</h2>
+    <ul>
+      <li>您可以随时卸载扩展，所有本地数据将被清除</li>
+      <li>您可以随时在设置中删除API密钥</li>
+      <li>您可以随时使用"恢复原状"功能恢复书签</li>
+    </ul>
+
+    <h2>权限说明</h2>
+    <p>本扩展请求以下权限：</p>
+    <ul>
+      <li><strong>bookmarks</strong>：用于读取、创建、移动和删除书签</li>
+      <li><strong>storage</strong>：用于存储API密钥和操作记录</li>
+      <li><strong>tabs</strong>：用于检测书签的可访问性（创建临时标签页检测）</li>
+    </ul>
+
+    <h2>儿童隐私</h2>
+    <p>本扩展不面向13岁以下的儿童。我们不会故意收集儿童的个人信息。</p>
+
+    <h2>隐私政策变更</h2>
+    <p>我们可能会不时更新本隐私政策。任何变更都会在本页面发布更新日期。</p>
+
+    <h2>联系我们</h2>
+    <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+    <ul>
+      <li>GitHub Issues: <a href="https://github.com/yourusername/bookmarks_deepseek_extension" target="_blank">项目地址</a></li>
+      <li>Email: your-email@example.com</li>
+    </ul>
+
+    <h2>同意</h2>
+    <p>使用本扩展即表示您同意本隐私政策。</p>
+  </div>
+</body>
+</html>
+

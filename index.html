@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks Smart Organizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        .nav-link {
+            display: inline-block;
+            padding: 12px 24px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        .section ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .section li {
+            margin-bottom: 10px;
+        }
+        .section a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        .section a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Bookmarks Smart Organizer</h1>
+            <p>A powerful Chrome extension for organizing and cleaning your bookmarks</p>
+            <div class="nav-links">
+                <a href="README.md" class="nav-link">📖 README</a>
+                <a href="USER_GUIDE.md" class="nav-link">📘 User Guide</a>
+                <a href="privacy.html" class="nav-link">🔒 Privacy Policy</a>
+                <a href="CHANGELOG.md" class="nav-link">📝 Changelog</a>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="section">
+                <h2>Welcome</h2>
+                <p>Bookmarks Smart Organizer helps you keep your Chrome bookmarks clean, organized, and accessible. This extension provides two main features:</p>
+                <ul>
+                    <li><strong>🔍 Invalid Bookmark Detection</strong> - Automatically detects and helps you remove inaccessible bookmarks</li>
+                    <li><strong>🤖 AI-Powered Classification</strong> - Uses DeepSeek AI to intelligently categorize your bookmarks</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="USER_GUIDE.md">User Guide</a> - Complete user manual with detailed instructions</li>
+                    <li><a href="privacy.html">Privacy Policy</a> - Learn how we handle your data</li>
+                    <li><a href="CHANGELOG.md">Changelog</a> - Version history and updates</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Features</h2>
+                <ul>
+                    <li>🔍 Smart detection of invalid bookmarks</li>
+                    <li>🤖 AI-powered bookmark classification</li>
+                    <li>📁 Automatic folder creation and organization</li>
+                    <li>↩️ Restore functionality for safety</li>
+                    <li>🗑️ Batch delete invalid bookmarks</li>
+                    <li>🔐 Secure local data processing</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>Installation</h2>
+                <p>Install from Chrome Web Store (recommended) or manually load the extension in developer mode.</p>
+                <p>See the <a href="README.md">README</a> for detailed installation instructions.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Bookmarks Smart Organizer. All rights reserved.</p>
+            <p>GNU GENERAL PUBLIC LICENSE</p>
+        </footer>
+    </div>
+</body>
+</html>
+

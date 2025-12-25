@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # Bookmarks Smart Organizer - User Guide
 
 <div align="right" style="margin-bottom: 20px;">

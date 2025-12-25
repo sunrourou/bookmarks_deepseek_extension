@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Bookmarks Smart Organizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .lang-switcher a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .lang-switcher a.active {
+            background: #667eea;
+            color: white;
+        }
+        .lang-switcher a:not(.active) {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .lang-switcher a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        h2 {
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .version {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        .version h2 {
+            margin-top: 0;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #5568d3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="#" onclick="switchLanguage('en'); return false;" id="btn-en" class="active">English</a>
+            <a href="#" onclick="switchLanguage('zh'); return false;" id="btn-zh">中文</a>
+        </div>
+
+        <div class="content">
+            <div id="english-version" class="content-section active">
+                <h1>Changelog</h1>
+
+                <div class="version">
+                    <h2>[1.0.0] - 2024</h2>
+                    
+                    <h3>New Features</h3>
+                    <ul>
+                        <li>🔍 Detect inaccessible bookmarks</li>
+                        <li>🤖 AI-powered bookmark classification</li>
+                        <li>📁 Apply classification results to bookmark folders</li>
+                        <li>↩️ Restore bookmarks to original state</li>
+                        <li>🗑️ Batch delete invalid bookmarks</li>
+                        <li>🔐 Secure API key storage</li>
+                        <li>📊 Real-time operation progress display</li>
+                        <li>🐛 Debug logging functionality</li>
+                    </ul>
+
+                    <h3>Technical Features</h3>
+                    <ul>
+                        <li>Compliant with Chrome Extension Manifest V3 specification</li>
+                        <li>Local data processing to protect user privacy</li>
+                        <li>Support for batch processing of large bookmark collections</li>
+                        <li>Comprehensive error handling mechanism</li>
+                    </ul>
+
+                    <h3>Security Improvements</h3>
+                    <ul>
+                        <li>Restricted network permissions to necessary API endpoints</li>
+                        <li>Content Security Policy (CSP)</li>
+                        <li>Secure bookmark operation records</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="chinese-version" class="content-section">
+                <h1>更新日志</h1>
+
+                <div class="version">
+                    <h2>[1.0.0] - 2024</h2>
+                    
+                    <h3>新增功能</h3>
+                    <ul>
+                        <li>🔍 检测不可访问的书签</li>
+                        <li>🤖 AI智能分类整理书签</li>
+                        <li>📁 应用分类结果到书签文件夹</li>
+                        <li>↩️ 恢复书签到原状功能</li>
+                        <li>🗑️ 批量删除无效书签</li>
+                        <li>🔐 安全的API密钥存储</li>
+                        <li>📊 实时显示操作进度</li>
+                        <li>🐛 Debug日志功能</li>
+                    </ul>
+
+                    <h3>技术特性</h3>
+                    <ul>
+                        <li>符合Chrome Extension Manifest V3规范</li>
+                        <li>本地数据处理，保护用户隐私</li>
+                        <li>支持大量书签的批量处理</li>
+                        <li>完善的错误处理机制</li>
+                    </ul>
+
+                    <h3>安全改进</h3>
+                    <ul>
+                        <li>限制网络权限到必要的API端点</li>
+                        <li>内容安全策略（CSP）</li>
+                        <li>安全的书签操作记录</li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="../index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const enContent = document.getElementById('english-version');
+            const zhContent = document.getElementById('chinese-version');
+            const btnEn = document.getElementById('btn-en');
+            const btnZh = document.getElementById('btn-zh');
+            
+            if (lang === 'zh') {
+                enContent.classList.remove('active');
+                zhContent.classList.add('active');
+                btnEn.classList.remove('active');
+                btnZh.classList.add('active');
+                localStorage.setItem('preferredLanguage', 'zh');
+            } else {
+                zhContent.classList.remove('active');
+                enContent.classList.add('active');
+                btnZh.classList.remove('active');
+                btnEn.classList.add('active');
+                localStorage.setItem('preferredLanguage', 'en');
+            }
+        }
+
+        // Load saved language preference
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            switchLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
+

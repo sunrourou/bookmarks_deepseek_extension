@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - Bookmarks Smart Organizer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .lang-switcher {
+            text-align: right;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .lang-switcher a {
+            display: inline-block;
+            padding: 8px 16px;
+            margin-left: 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.2s;
+        }
+        .lang-switcher a.active {
+            background: #667eea;
+            color: white;
+        }
+        .lang-switcher a:not(.active) {
+            background: #e0e0e0;
+            color: #333;
+        }
+        .lang-switcher a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        h2 {
+            color: #333;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        h3 {
+            color: #555;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        h4 {
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #333;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #5568d3;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="#" onclick="switchLanguage('en'); return false;" id="btn-en" class="active">English</a>
+            <a href="#" onclick="switchLanguage('zh'); return false;" id="btn-zh">中文</a>
+        </div>
+
+        <div class="content">
+            <div id="english-version" class="content-section active">
+                <h1>Bookmarks Smart Organizer - User Guide</h1>
+                <p>Welcome to <strong>Bookmarks Smart Organizer</strong>, a powerful Chrome extension that helps you keep your bookmarks clean, organized, and accessible. This guide will walk you through all the features and how to use them effectively.</p>
+
+                <h2>📋 Table of Contents</h2>
+                <ul>
+                    <li><a href="#overview-en">Overview</a></li>
+                    <li><a href="#installation-en">Installation</a></li>
+                    <li><a href="#getting-started-en">Getting Started</a></li>
+                    <li><a href="#features-en">Features</a></li>
+                    <li><a href="#detailed-usage-en">Detailed Usage</a></li>
+                    <li><a href="#privacy-security-en">Privacy & Security</a></li>
+                    <li><a href="#troubleshooting-en">Troubleshooting</a></li>
+                    <li><a href="#faq-en">FAQ</a></li>
+                </ul>
+
+                <h2 id="overview-en">🎯 Overview</h2>
+                <p>Bookmarks Smart Organizer is designed to solve two common problems:</p>
+                <ol>
+                    <li><strong>Invalid Bookmarks</strong>: Over time, many bookmarks become inaccessible due to broken links, moved pages, or deleted websites.</li>
+                    <li><strong>Disorganized Bookmarks</strong>: Without proper organization, finding the right bookmark can be time-consuming.</li>
+                </ol>
+                <p>Our extension provides intelligent solutions for both issues:</p>
+                <ul>
+                    <li><strong>Smart Detection</strong>: Automatically identifies inaccessible bookmarks</li>
+                    <li><strong>AI-Powered Organization</strong>: Uses DeepSeek AI to intelligently categorize your bookmarks</li>
+                    <li><strong>One-Click Cleanup</strong>: Easily remove invalid bookmarks or organize them into folders</li>
+                </ul>
+
+                <h2 id="installation-en">📥 Installation</h2>
+                <h3>Method 1: Chrome Web Store (Recommended)</h3>
+                <ol>
+                    <li>Visit the <a href="https://chrome.google.com/webstore" target="_blank">Chrome Web Store</a></li>
+                    <li>Search for "Bookmarks Smart Organizer"</li>
+                    <li>Click "Add to Chrome"</li>
+                    <li>Confirm the installation</li>
+                </ol>
+
+                <h3>Method 2: Manual Installation</h3>
+                <ol>
+                    <li>Download or clone this repository</li>
+                    <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+                    <li>Enable "Developer mode" (toggle in the top right)</li>
+                    <li>Click "Load unpacked"</li>
+                    <li>Select the extension folder</li>
+                </ol>
+
+                <h2 id="getting-started-en">🚀 Getting Started</h2>
+                <h3>First Launch</h3>
+                <ol>
+                    <li><strong>Click the extension icon</strong> in your Chrome toolbar</li>
+                    <li>You'll see the main interface with two tabs:
+                        <ul>
+                            <li>🔍 <strong>Detect Invalid Bookmarks</strong> (default)</li>
+                            <li>🤖 <strong>AI Classification</strong></li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Basic Workflow</h3>
+                <ol>
+                    <li>Click <strong>"📖 Load Bookmarks"</strong> to load all your bookmarks</li>
+                    <li>Choose your action:
+                        <ul>
+                            <li><strong>Detect invalid bookmarks</strong> (no setup required)</li>
+                            <li><strong>AI classification</strong> (requires API key setup)</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2 id="features-en">✨ Features</h2>
+                <h3>🔍 Invalid Bookmark Detection</h3>
+                <p><strong>What it does:</strong></p>
+                <ul>
+                    <li>Tests each bookmark's accessibility</li>
+                    <li>Identifies broken links, moved pages, and deleted websites</li>
+                    <li>Provides a clean list of invalid bookmarks</li>
+                </ul>
+                <p><strong>Why it's useful:</strong></p>
+                <ul>
+                    <li>Keeps your bookmark bar clean</li>
+                    <li>Saves time by removing dead links</li>
+                    <li>Improves browsing efficiency</li>
+                </ul>
+
+                <h3>🤖 AI-Powered Classification</h3>
+                <p><strong>What it does:</strong></p>
+                <ul>
+                    <li>Analyzes bookmark titles and URLs</li>
+                    <li>Groups related bookmarks together</li>
+                    <li>Creates organized folder structures</li>
+                </ul>
+                <p><strong>Why it's useful:</strong></p>
+                <ul>
+                    <li>Saves hours of manual organization</li>
+                    <li>Creates logical groupings automatically</li>
+                    <li>Makes finding bookmarks easier</li>
+                </ul>
+
+                <h3>📁 Apply Classification</h3>
+                <p><strong>What it does:</strong></p>
+                <ul>
+                    <li>Creates bookmark folders based on AI classification</li>
+                    <li>Moves bookmarks into appropriate folders</li>
+                    <li>Maintains a record for easy restoration</li>
+                </ul>
+                <p><strong>Why it's useful:</strong></p>
+                <ul>
+                    <li>Transforms your bookmark structure instantly</li>
+                    <li>Keeps everything organized</li>
+                    <li>Can be undone if needed</li>
+                </ul>
+
+                <h3>↩️ Restore Function</h3>
+                <p><strong>What it does:</strong></p>
+                <ul>
+                    <li>Restores bookmarks to their original positions</li>
+                    <li>Removes created folders</li>
+                    <li>Returns everything to the previous state</li>
+                </ul>
+                <p><strong>Why it's useful:</strong></p>
+                <ul>
+                    <li>Safety net for experimentation</li>
+                    <li>Easy to undo changes</li>
+                    <li>Peace of mind</li>
+                </ul>
+
+                <h2 id="detailed-usage-en">📖 Detailed Usage</h2>
+                <h3>Detecting Invalid Bookmarks</h3>
+                <h4>Step-by-Step Guide</h4>
+                <ol>
+                    <li><strong>Open the Extension</strong>
+                        <ul>
+                            <li>Click the extension icon in your Chrome toolbar</li>
+                            <li>The "Detect Invalid Bookmarks" tab is selected by default</li>
+                        </ul>
+                    </li>
+                    <li><strong>Load Your Bookmarks</strong>
+                        <ul>
+                            <li>Click the <strong>"📖 Load Bookmarks"</strong> button</li>
+                            <li>Wait for all bookmarks to load</li>
+                            <li>You'll see the total count displayed</li>
+                        </ul>
+                    </li>
+                    <li><strong>Start Detection</strong>
+                        <ul>
+                            <li>Click the <strong>"🔍 Check Bookmark Accessibility"</strong> button</li>
+                            <li>A progress bar will show the detection progress</li>
+                            <li>The status will update as bookmarks are checked</li>
+                        </ul>
+                    </li>
+                    <li><strong>Review Results</strong>
+                        <ul>
+                            <li>Invalid bookmarks are displayed in a list</li>
+                            <li>Each bookmark shows: Title, URL, Delete button (❌)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Take Action</strong>
+                        <ul>
+                            <li><strong>Delete Individual</strong>: Click the ❌ button next to any bookmark</li>
+                            <li><strong>Delete All</strong>: Click the <strong>"🗑️ Delete All Invalid Bookmarks"</strong> button</li>
+                            <li>Confirm the deletion when prompted</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h4>Tips</h4>
+                <ul>
+                    <li>Detection may take time for large bookmark collections</li>
+                    <li>The extension checks 3 bookmarks simultaneously for efficiency</li>
+                    <li>You can stop and resume detection if needed</li>
+                </ul>
+
+                <h3>AI Classification</h3>
+                <h4>Prerequisites</h4>
+                <p>Before using AI classification, you need to:</p>
+                <ol>
+                    <li><strong>Get a DeepSeek API Key</strong>
+                        <ul>
+                            <li>Visit <a href="https://platform.deepseek.com" target="_blank">DeepSeek Platform</a></li>
+                            <li>Sign up or log in</li>
+                            <li>Generate an API key</li>
+                        </ul>
+                    </li>
+                    <li><strong>Configure the Extension</strong>
+                        <ul>
+                            <li>Click the ⚙️ settings button in the extension popup</li>
+                            <li>Or right-click the extension icon → Options</li>
+                            <li>Enter your API key</li>
+                            <li>Click "💾 Save Settings"</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h4>Step-by-Step Guide</h4>
+                <ol>
+                    <li><strong>Switch to AI Classification Tab</strong> - Click the <strong>"🤖 AI Classification"</strong> tab</li>
+                    <li><strong>Load Your Bookmarks</strong> - Click <strong>"📖 Load Bookmarks"</strong></li>
+                    <li><strong>Start Classification</strong> - Click <strong>"🤖 AI Classification"</strong> button</li>
+                    <li><strong>Review Classification Results</strong> - Results are grouped by category</li>
+                    <li><strong>Apply Classification</strong> (Optional) - Click <strong>"📁 Apply Classification to Bookmarks"</strong></li>
+                    <li><strong>Restore if Needed</strong> (Optional) - Click <strong>"↩️ Restore"</strong> to undo changes</li>
+                </ol>
+
+                <h4>Tips</h4>
+                <ul>
+                    <li>Enable Debug Logs to see detailed classification process</li>
+                    <li>Classification works best with descriptive bookmark titles</li>
+                    <li>Large bookmark collections are processed in batches automatically</li>
+                </ul>
+
+                <h3>Debug Mode</h3>
+                <h4>Enabling Debug Mode</h4>
+                <ol>
+                    <li>Check the <strong>"Debug Logs"</strong> checkbox</li>
+                    <li>A debug log panel will appear</li>
+                    <li>All operations will be logged with timestamps</li>
+                </ol>
+
+                <h2 id="privacy-security-en">🔒 Privacy & Security</h2>
+                <h3>Data Handling</h3>
+                <p><strong>Local Processing:</strong></p>
+                <ul>
+                    <li>All bookmark data is processed locally</li>
+                    <li>No data is uploaded to our servers</li>
+                    <li>Your bookmarks stay on your device</li>
+                </ul>
+                <p><strong>API Communication:</strong></p>
+                <ul>
+                    <li>Only AI classification sends data to DeepSeek API</li>
+                    <li>Only bookmark titles and URLs are sent</li>
+                    <li>Data is used solely for classification</li>
+                </ul>
+                <p><strong>Storage:</strong></p>
+                <ul>
+                    <li>API keys stored in Chrome's secure sync storage</li>
+                    <li>Operation records stored locally</li>
+                    <li>No personal information collected</li>
+                </ul>
+
+                <h3>Permissions Explained</h3>
+                <ul>
+                    <li><strong>bookmarks</strong>: Read, create, move, and delete bookmarks</li>
+                    <li><strong>storage</strong>: Store API keys and operation records</li>
+                    <li><strong>tabs</strong>: Create temporary tabs to test bookmark accessibility</li>
+                </ul>
+
+                <h2 id="troubleshooting-en">🛠️ Troubleshooting</h2>
+                <h3>Common Issues</h3>
+                <h4>Issue: "Please configure DeepSeek API key"</h4>
+                <p><strong>Solution:</strong> Go to Settings (⚙️ button), enter your DeepSeek API key, and click Save.</p>
+
+                <h4>Issue: Detection is slow</h4>
+                <p><strong>Solution:</strong> This is normal for large bookmark collections. The extension checks 3 bookmarks at a time. Be patient, it will complete.</p>
+
+                <h4>Issue: Some bookmarks not detected as invalid</h4>
+                <p><strong>Solution:</strong> Some sites may block automated access. Timeout is set to 3 seconds per bookmark. Manually verify if needed.</p>
+
+                <h4>Issue: Classification results not accurate</h4>
+                <p><strong>Solution:</strong> Ensure bookmark titles are descriptive. Try re-classifying with different bookmarks. Check Debug Logs for details.</p>
+
+                <h2 id="faq-en">❓ FAQ</h2>
+                <h3>General Questions</h3>
+                <p><strong>Q: Is this extension free?</strong><br>
+                A: Yes, the extension is completely free to use.</p>
+
+                <p><strong>Q: Do I need an API key?</strong><br>
+                A: Only for AI classification. Invalid bookmark detection works without any setup.</p>
+
+                <p><strong>Q: Will this slow down my browser?</strong><br>
+                A: No, the extension only runs when you actively use it. It doesn't run in the background.</p>
+
+                <p><strong>Q: Can I use this offline?</strong><br>
+                A: Invalid bookmark detection works offline. AI classification requires internet connection.</p>
+
+                <h3>Technical Questions</h3>
+                <p><strong>Q: How does bookmark detection work?</strong><br>
+                A: The extension creates temporary tabs to test if bookmarks are accessible. It checks for error pages and timeouts.</p>
+
+                <p><strong>Q: How accurate is AI classification?</strong><br>
+                A: Classification accuracy depends on bookmark titles and URLs. Descriptive titles yield better results.</p>
+
+                <p><strong>Q: What happens if I delete a bookmark by mistake?</strong><br>
+                A: Chrome's bookmark system doesn't have an undo feature. Be careful when deleting. You can restore from Chrome's bookmark backup if available.</p>
+
+                <h3>Privacy Questions</h3>
+                <p><strong>Q: Are my bookmarks sent to any server?</strong><br>
+                A: Only for AI classification, and only titles and URLs are sent to DeepSeek API. Detection works entirely locally.</p>
+
+                <p><strong>Q: Is my API key secure?</strong><br>
+                A: Yes, API keys are stored in Chrome's encrypted sync storage and never shared.</p>
+
+                <p><strong>Thank you for using Bookmarks Smart Organizer!</strong> 🎉</p>
+            </div>
+
+            <div id="chinese-version" class="content-section">
+                <h1>书签智能整理助手 - 使用手册</h1>
+                <p>欢迎使用<strong>书签智能整理助手</strong>，这是一款强大的Chrome扩展，帮助您保持书签整洁、有序且可访问。本手册将详细介绍所有功能和使用方法。</p>
+
+                <h2>📋 目录</h2>
+                <ul>
+                    <li><a href="#概述-zh">概述</a></li>
+                    <li><a href="#安装-zh">安装</a></li>
+                    <li><a href="#快速开始-zh">快速开始</a></li>
+                    <li><a href="#功能特性-zh">功能特性</a></li>
+                    <li><a href="#详细使用-zh">详细使用</a></li>
+                    <li><a href="#隐私与安全-zh">隐私与安全</a></li>
+                    <li><a href="#故障排除-zh">故障排除</a></li>
+                    <li><a href="#常见问题-zh">常见问题</a></li>
+                </ul>
+
+                <h2 id="概述-zh">🎯 概述</h2>
+                <p>书签智能整理助手旨在解决两个常见问题：</p>
+                <ol>
+                    <li><strong>无效书签</strong>：随着时间的推移，许多书签因链接失效、页面移动或网站删除而变得不可访问。</li>
+                    <li><strong>书签混乱</strong>：没有适当的组织，找到正确的书签可能很耗时。</li>
+                </ol>
+                <p>我们的扩展为这两个问题提供了智能解决方案：</p>
+                <ul>
+                    <li><strong>智能检测</strong>：自动识别不可访问的书签</li>
+                    <li><strong>AI驱动整理</strong>：使用DeepSeek AI智能分类您的书签</li>
+                    <li><strong>一键清理</strong>：轻松删除无效书签或将其整理到文件夹中</li>
+                </ul>
+
+                <h2 id="安装-zh">📥 安装</h2>
+                <h3>方法一：Chrome Web Store（推荐）</h3>
+                <ol>
+                    <li>访问 <a href="https://chrome.google.com/webstore" target="_blank">Chrome Web Store</a></li>
+                    <li>搜索"书签智能整理助手"</li>
+                    <li>点击"添加至 Chrome"</li>
+                    <li>确认安装</li>
+                </ol>
+
+                <h3>方法二：手动安装</h3>
+                <ol>
+                    <li>下载或克隆此仓库</li>
+                    <li>打开Chrome并访问 <code>chrome://extensions/</code></li>
+                    <li>启用"开发者模式"（右上角开关）</li>
+                    <li>点击"加载已解压的扩展程序"</li>
+                    <li>选择扩展文件夹</li>
+                </ol>
+
+                <h2 id="快速开始-zh">🚀 快速开始</h2>
+                <h3>首次使用</h3>
+                <ol>
+                    <li><strong>点击扩展图标</strong>（Chrome工具栏中）</li>
+                    <li>您将看到主界面，包含两个标签页：
+                        <ul>
+                            <li>🔍 <strong>检测无效书签</strong>（默认）</li>
+                            <li>🤖 <strong>AI分类整理</strong></li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>基本流程</h3>
+                <ol>
+                    <li>点击 <strong>"📖 加载书签"</strong> 加载所有书签</li>
+                    <li>选择您的操作：
+                        <ul>
+                            <li><strong>检测无效书签</strong>（无需设置）</li>
+                            <li><strong>AI分类整理</strong>（需要API密钥设置）</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h2 id="功能特性-zh">✨ 功能特性</h2>
+                <h3>🔍 无效书签检测</h3>
+                <p><strong>功能说明：</strong></p>
+                <ul>
+                    <li>测试每个书签的可访问性</li>
+                    <li>识别失效链接、移动页面和已删除的网站</li>
+                    <li>提供清晰的无效书签列表</li>
+                </ul>
+                <p><strong>为什么有用：</strong></p>
+                <ul>
+                    <li>保持书签栏整洁</li>
+                    <li>通过删除死链接节省时间</li>
+                    <li>提高浏览效率</li>
+                </ul>
+
+                <h3>🤖 AI智能分类</h3>
+                <p><strong>功能说明：</strong></p>
+                <ul>
+                    <li>分析书签标题和URL</li>
+                    <li>将相关书签分组</li>
+                    <li>创建有序的文件夹结构</li>
+                </ul>
+                <p><strong>为什么有用：</strong></p>
+                <ul>
+                    <li>节省数小时的手动整理时间</li>
+                    <li>自动创建逻辑分组</li>
+                    <li>使查找书签更容易</li>
+                </ul>
+
+                <h3>📁 应用分类</h3>
+                <p><strong>功能说明：</strong></p>
+                <ul>
+                    <li>根据AI分类结果创建书签文件夹</li>
+                    <li>将书签移动到相应的文件夹</li>
+                    <li>保存操作记录以便轻松恢复</li>
+                </ul>
+
+                <h3>↩️ 恢复功能</h3>
+                <p><strong>功能说明：</strong></p>
+                <ul>
+                    <li>将书签恢复到原始位置</li>
+                    <li>删除创建的文件夹</li>
+                    <li>将所有内容返回到之前的状态</li>
+                </ul>
+
+                <h2 id="详细使用-zh">📖 详细使用</h2>
+                <h3>检测无效书签</h3>
+                <h4>分步指南</h4>
+                <ol>
+                    <li><strong>打开扩展</strong> - 点击Chrome工具栏中的扩展图标</li>
+                    <li><strong>加载书签</strong> - 点击 <strong>"📖 加载书签"</strong> 按钮</li>
+                    <li><strong>开始检测</strong> - 点击 <strong>"🔍 检测书签可访问性"</strong> 按钮</li>
+                    <li><strong>查看结果</strong> - 无效书签显示在列表中</li>
+                    <li><strong>执行操作</strong> - 可以单独删除或批量删除</li>
+                </ol>
+
+                <h3>AI分类整理</h3>
+                <h4>前提条件</h4>
+                <p>在使用AI分类之前，您需要：</p>
+                <ol>
+                    <li><strong>获取DeepSeek API密钥</strong> - 访问 <a href="https://platform.deepseek.com" target="_blank">DeepSeek平台</a></li>
+                    <li><strong>配置扩展</strong> - 在设置中输入API密钥</li>
+                </ol>
+
+                <h4>分步指南</h4>
+                <ol>
+                    <li>切换到AI分类标签页</li>
+                    <li>加载书签</li>
+                    <li>开始分类</li>
+                    <li>查看分类结果</li>
+                    <li>应用分类（可选）</li>
+                    <li>恢复（如需要）</li>
+                </ol>
+
+                <h2 id="隐私与安全-zh">🔒 隐私与安全</h2>
+                <h3>数据处理</h3>
+                <p><strong>本地处理：</strong>所有书签数据在本地处理，不上传到我们的服务器。</p>
+                <p><strong>API通信：</strong>只有AI分类会向DeepSeek API发送数据，只发送书签标题和URL。</p>
+                <p><strong>存储：</strong>API密钥存储在Chrome的安全同步存储中，操作记录本地存储。</p>
+
+                <h2 id="故障排除-zh">🛠️ 故障排除</h2>
+                <h3>常见问题</h3>
+                <h4>问题："请配置DeepSeek API密钥"</h4>
+                <p><strong>解决方案：</strong>转到设置，输入您的DeepSeek API密钥，点击保存。</p>
+
+                <h4>问题：检测速度慢</h4>
+                <p><strong>解决方案：</strong>对于大型书签集合这是正常的。扩展同时检查3个书签。请耐心等待。</p>
+
+                <h2 id="常见问题-zh">❓ 常见问题</h2>
+                <h3>一般问题</h3>
+                <p><strong>问：这个扩展是免费的吗？</strong><br>
+                答：是的，扩展完全免费使用。</p>
+
+                <p><strong>问：我需要API密钥吗？</strong><br>
+                答：仅AI分类需要。无效书签检测无需任何设置即可工作。</p>
+
+                <p><strong>问：这会减慢我的浏览器速度吗？</strong><br>
+                答：不会，扩展只在您主动使用时运行。它不会在后台运行。</p>
+
+                <p><strong>感谢使用书签智能整理助手！</strong> 🎉</p>
+            </div>
+
+            <a href="../index.html" class="back-link">← Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const enContent = document.getElementById('english-version');
+            const zhContent = document.getElementById('chinese-version');
+            const btnEn = document.getElementById('btn-en');
+            const btnZh = document.getElementById('btn-zh');
+            
+            if (lang === 'zh') {
+                enContent.classList.remove('active');
+                zhContent.classList.add('active');
+                btnEn.classList.remove('active');
+                btnZh.classList.add('active');
+                localStorage.setItem('preferredLanguage', 'zh');
+            } else {
+                zhContent.classList.remove('active');
+                enContent.classList.add('active');
+                btnZh.classList.remove('active');
+                btnEn.classList.add('active');
+                localStorage.setItem('preferredLanguage', 'en');
+            }
+        }
+
+        // Load saved language preference
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+            switchLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
+

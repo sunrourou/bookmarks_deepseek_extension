@@ -1,8 +1,12 @@
+---
+layout: default
+---
+
 # Bookmarks Smart Organizer - User Guide
 
-<div align="right">
-  <a href="#english-version" style="background: #667eea; color: white; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; margin-left: 5px; text-decoration: none; display: inline-block;">English</a>
-  <a href="#中文版本" style="background: #e0e0e0; color: #333; border: none; padding: 5px 15px; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block;">中文</a>
+<div align="right" style="margin-bottom: 20px;">
+  <a href="#english-version" style="background: #667eea; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-left: 5px; text-decoration: none; display: inline-block; font-weight: bold;">English</a>
+  <a href="#chinese-version" style="background: #e0e0e0; color: #333; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; text-decoration: none; display: inline-block; font-weight: bold;">中文</a>
 </div>
 
 ---
@@ -375,7 +379,7 @@ We hope this extension helps you maintain a clean and organized bookmark collect
 
 ---
 
-<div id="中文版本">
+<div id="chinese-version">
 
 # 书签智能整理助手 - 使用手册
 
@@ -383,14 +387,14 @@ We hope this extension helps you maintain a clean and organized bookmark collect
 
 ## 📋 目录
 
-- [概述](#概述)
-- [安装](#安装)
-- [快速开始](#快速开始)
-- [功能特性](#功能特性)
-- [详细使用](#详细使用)
-- [隐私与安全](#隐私与安全)
-- [故障排除](#故障排除)
-- [常见问题](#常见问题)
+- [概述](#概述-1)
+- [安装](#安装-1)
+- [快速开始](#快速开始-1)
+- [功能特性](#功能特性-1)
+- [详细使用](#详细使用-1)
+- [隐私与安全](#隐私与安全-1)
+- [故障排除](#故障排除-1)
+- [常见问题](#常见问题-1)
 
 ## 🎯 概述
 
